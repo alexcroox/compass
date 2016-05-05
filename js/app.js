@@ -154,6 +154,8 @@
 
     if (typeof event.webkitCompassHeading !== "undefined") {
       heading = event.webkitCompassHeading; //iOS non-standard
+    } else {
+      heading -= heading;
     }
 
     var orientation = getBrowserOrientation();
